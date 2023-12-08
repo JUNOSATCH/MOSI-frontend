@@ -42,7 +42,7 @@ export default function Home() {
           <div className="homeimgdiv">
             <div>
               <h5 className="ment">
-                안녕하세요, 민원 시뮬레이션 서비스 민원의 온도입니다.
+                안녕하세요, 민원 시뮬레이션 서비스 MOSI입니다.
               </h5>
             </div>
             <div>

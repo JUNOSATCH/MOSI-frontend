@@ -8,7 +8,7 @@ export default function Rank() {
             <Header/>
             <div className="rankdiv">
             <div class="container">
-            <h2>🏆명예의 전당🏆</h2>
+            <h2>🏆MOSI RANK🏆</h2>
             <ul class="responsive-table">
                 <li class="table-header">
                     <div class="table-headertxt col col-1">등수</div>

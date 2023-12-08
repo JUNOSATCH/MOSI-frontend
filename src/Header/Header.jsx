@@ -1,12 +1,16 @@
 import React from "react";
 import Styles from "./header.css"; 
+import mosilogo from "./mosilogo.png";
 export default function Header() {
     return(
         <div className="headerbox">
-            
+            <div className="logobox">
+                <a className="logo" href="/">
+                <img src={mosilogo} alt="logo" className="mosi"/></a>
+            </div>
           
             <nav>
-                <a className="logo" href="/">🌡 민원의온도</a>
+                <a></a>
                 <a href="/">Home</a>
                 <a href="#">Record</a>
                 <a href="/rank">Rank</a>
