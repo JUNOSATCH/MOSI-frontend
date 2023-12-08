@@ -1,0 +1,152 @@
+.complaindiv{
+    margin-top: 15vh;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+
+}
+.calldiv {
+    width: 50vw;
+    margin-left: 10vw;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.callingman {
+    width: 35vw;
+    height: 70vh;
+    border-radius: 50%;
+}
+
+
+.callimg{
+    margin-left: 13.8vw;
+    margin-top: 3vh;
+    width: 2vw;
+    border-radius: 50%;
+}
+
+.callnotice{
+    font-size: 12px;
+}
+
+.textdiv{
+    width: 50vw;
+    height: 70vh;
+}
+.tempbox{
+    height: 20vh;
+    margin-left: 5vw;
+}
+.textbox{
+    width: 30vw;
+    height: 50vh;
+    background-color: white;
+    border-radius: 20px;
+    border: 2px solid rgb(0,0,0,0.2);
+    margin-top: 5vh;
+}
+
+
+/*temp div*/
+
+.gauge {
+    width: 20vw;
+    height: 12vh;
+  }
+  
+  .background-inner,
+  .background-outer {
+    position: relative;
+    border-radius: 150px 150px 0 0;
+    overflow: hidden;
+  }
+  
+  .background-outer {
+    width: 300px;
+    height: 150px;
+    background-color: #e5e5e5;
+  }
+  
+  .background-inner {
+    width: 240px;
+    height: 120px;
+    background-color: #f5f5f5;
+  }
+  
+  .percentage-inner,
+  .percentage-outer {
+    position: absolute;
+    left: 0;
+    transform-origin: top center;
+  }
+  
+  .percentage-outer {
+    top: 150px;
+    width: 300px;
+    height: 150px;
+    background-color: rgb(255, 0, 0) ;
+    transform:rotate(60deg);
+  /*   background-color: #0039a6; */
+  }
+  
+  .percentage-inner {
+    top: 120px;
+    width: 240px;
+    height: 120px;
+    background-color: #83bfd9;
+  /*   background-color: #ffa500; */
+  transform:rotate(120deg);
+  }
+  
+  .mask-inner,
+  .mask-outer {
+    position: absolute;
+    left: 20px;
+    bottom: 0;
+    background-color: white;
+    border-radius: 150px 150px 0 0;
+  }
+  
+  .mask-outer {
+    height: 130px;
+    width: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  
+  .mask-inner {
+    height: 100px;
+    width: 200px;
+  }
+  
+  
+  .color-inner-gauge::before {
+    background-color: #73b2c9;
+    /*   background-color: #ffa500; */
+  }
+  
+  .color-outer-gauge::before {
+    background-color: #345f92;
+    /*   background-color: #0039a6; */
+  }
+  
+  .m-t-5 {
+    margin-top: 3rem;
+    padding: 0;
+  }
+  
+  .status-current-level {
+    float: left;
+    margin-left: -2vw;
+    font-weight: 900;
+    color: rgb(0, 0, 0);
+  }
+  
+  .status-next-level {
+    font-weight: 900;
+    margin-left: -13.8vw;
+    color : #83bfd9;
+  }

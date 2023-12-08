@@ -1,0 +1,82 @@
+@font-face {
+  font-family: 'HakgyoansimWoojuR';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimWoojuR.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+.rankdiv .container {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    color : black;
+    margin-top: 12vh;
+  }
+
+.rankdiv  h2 {
+  font-family: 'HakgyoansimWoojuR';
+    font-size: 50px;
+    font-weight: 900;
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+.rankdiv h2 small {
+  font-family: 'HakgyoansimWoojuR';
+    font-size: 0.5em;
+  }
+.responsive-table{
+    margin-top: 8vh;
+ } 
+.responsive-table li {
+  font-family: 'HakgyoansimWoojuR';
+  font-size: 20px;
+  font-weight: 900;
+    border-radius: 3px;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    border-radius: 10px;
+  }
+  .hr{
+    height: 3px;
+    background-color: rgb(0,0,0,0.1);
+    border-radius: 50px;
+  }
+  .responsive-table .table-header {
+    background-color: rgb(156, 10, 10);
+    color:#ffffff;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .table-row-first{
+    background-color: rgb(229, 190, 190);
+  }
+  .responsive-table .table-row {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .responsive-table .col-1 {
+    flex-basis: 10%;
+  }
+  
+  .responsive-table .col-2 {
+    flex-basis: 40%;
+  }
+  
+  .responsive-table .col-3 {
+    flex-basis: 25%;
+  }
+  
+  .responsive-table .col-4 {
+    flex-basis: 25%;
+  }
+  .table-headertxt{
+    font-weight: 900;
+    font-size: 20px;
+  }
+  
