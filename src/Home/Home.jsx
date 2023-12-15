@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "../Header/Header";
 import styles from "./home.css";
-import homeimg from "./temp.gif";
 import Modal from "../Modal/Modal";
 import Swal from "sweetalert2";
 
@@ -42,8 +41,9 @@ export default function Home() {
           <div className="homeimgdiv">
             <div>
               <h5 className="ment">
-                안녕하세요, 민원 시뮬레이션 서비스 MOSI입니다.
-              </h5>
+                안녕하세요, 민원 시뮬레이터 MOSI입니다.</h5>
+              <h6 className="ment2">닉네임을 입력 후, 직접 민원 필터링 서비스를 체험하세요!</h6>
+              
             </div>
             <div>
               <img

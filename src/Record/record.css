@@ -1,0 +1,22 @@
+.recorddiv{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.recordmain{
+    background-color: rgba(236, 214, 214, 0.3);
+    width: 50vw;
+    margin-left: 24vw;
+    margin-top: 5vh;
+    height: 57vh;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.recordname{
+    margin-top: 20vh;
+    font-size: 24px;
+}
+.recordtxt{
+    font-size: 20px;
+}
