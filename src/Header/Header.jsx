@@ -12,7 +12,7 @@ export default function Header() {
             <nav>
                 <a></a>
                 <a href="/">Home</a>
-                <a href="#">Record</a>
+                <a href="/list">Record</a>
                 <a href="/rank">Rank</a>
                 <a href="#">Partners</a>
             </nav>

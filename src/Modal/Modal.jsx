@@ -3,6 +3,7 @@ import axios from "axios";
 import { ReactMediaRecorder } from "react-media-recorder";
 import styles from "./modal.css";
 import { useEffect } from "react";
+
 export default function Modal({ closeModal }) {
   const url = 'http://example.com/mp3file.mp3';
   

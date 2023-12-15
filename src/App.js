@@ -5,6 +5,7 @@ import Complain from "./Complain/Complain";
 import Rank from "./Rank/Rank";
 import Modal from "./Modal/Modal";
 import Record from "./Record/Record";
+import List from "./list/List";
 function App() {
   return (
     <div className="App">
@@ -15,6 +16,7 @@ function App() {
         <Route path="/rank" element={<Rank/>}/>
         <Route path="/record" element={<Record/>}/>
         <Route path="/modal" element={<Modal />}/>
+        <Route path="/list" element={<List />}/>
   
   
       </Routes>

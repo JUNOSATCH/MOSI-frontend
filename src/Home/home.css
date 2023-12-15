@@ -5,7 +5,13 @@
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimWoojuR.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
-}
+  }
+  @font-face {
+    font-family: 'TTWanjudaedunsancheB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/TTWanjudaedunsancheB.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+  }
 
 .homedivmain{
    margin: 0 auto;
@@ -20,8 +26,8 @@
 }
 
 .ment{
-    font-size: 24px;
-    font-family: 'HakgyoansimWoojuR';
+    font-size: 30px;
+    font-family: 'TTWanjudaedunsancheB';
     margin-top: 5vh;
 }
 .ment2{
@@ -30,15 +36,15 @@
     font-family: 'HakgyoansimWoojuR';
 }
 .homeimgdiv{
-    margin-top: 0vh;
-    margin: 0 auto;
+    margin-top: -2vh;
+    
     text-align: center;
     justify-content: center;
   
 }
 
 .startbtn {
-    background-color: rgb(46, 46, 46,0.8);
+    background-color: rgb(0, 0, 0,0.38);
     border-radius: 30px;
     font-size: 24px;
     padding: 5px;
