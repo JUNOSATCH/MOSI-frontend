@@ -2,53 +2,53 @@ import React, { useState } from "react";
 import axios from "axios";
 import { ReactMediaRecorder } from "react-media-recorder";
 import styles from "./modal.css";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+
+const url = 'http://localhost:8080/api';
+
+
 export default function Modal({ closeModal }) {
-  const url = 'http://example.com/mp3file.mp3';
-  
-  useEffect(() => {
-    axios.get(url, { responseType: 'arraybuffer' })
-      .then(response => {
-        // Processing the response here
-        const mp3Buffer = response.data;
-        // mp3Buffer contains the binary data of the MP3 file now
-      })
-      .catch(error => {
-        console.error('Error fetching MP3 file:', error);
-      });
-  }, []);
   
   const fileupload = async () => {
     const formData = new FormData();
-    formData.append("audio", "recorded_audio.mp3"); // Replace 'audioBlob' with your captured audio blob
-    
+    formData.append("file", reqAudio); // Replace 'audioBlob' with your captured audio blob
+    formData.append("teacher", 1);
     try {
-      const response = await axios.post("your_upload_endpoint", formData);
+      const response = await axios.post(`${url}/dialogue`, formData, {
+        responseType: 'arraybuffer', // Ensure response is treated as an array buffer
+      });
+      const mp3Buffer = response.data;
+      const audioBlob = new File([mp3Buffer], "result", { type: 'audio/wav' });
+      setResAudio(URL.createObjectURL(audioBlob));
+      setResp(true);
       // Handle the response here
     } catch (error) {
       console.error("Error uploading file: ", error);
     }
-
-  };
-  
-  
-  const handleQuit = () => {
-    // 부모 컴포넌트에서 전달한 closeModal 함수 호출
-    closeModal();
   };
 
-  const [resp, setResp] = useState(""); // State to hold response data
+  const endCall = async () => {
+    try {
+      const response = await axios.post(`${url}/analysis`, {});
+      console.log(response.data);
+      closeModal();
+    } catch (err) { console.error(err); }
+  }
+
+
+  const [resp, setResp] = useState(false); // State to hold response data
   const [isRecording, setIsRecording] = useState(false); // State for recording toggle
+  const [resAudio, setResAudio] = useState("");
+  const [reqAudio, setReqAudio] = useState("");
 
   const [leftButtonText, setLeftButtonText] = useState("Speak"); // Initial left button text
   const [leftButtonClass, setLeftButtonClass] = useState("confirm"); // Initial left button class
 
-  const toggleRecording = ({ startRecording, stopRecording }) => {
+  const toggleRecording = ({ startRecording, stopRecording, mediaBlobUrl }) => {
     if (isRecording) {
       stopRecording();
       setLeftButtonText("Speak");
       setLeftButtonClass("confirm");
-      fileupload();
     } else {
       startRecording();
       setLeftButtonText("Stop");
@@ -57,12 +57,28 @@ export default function Modal({ closeModal }) {
     setIsRecording(!isRecording); // 토글로 상태 변화
   };
 
+  const onStop = async (blobObject) => {
+    const audioBlob = await fetch(blobObject).then((r) => r.blob());
+    const audioFile = new File([audioBlob], 'voice.wav', { type: 'audio/wav' });
+    setReqAudio(audioFile);
+  }
+
+  const mounted = useRef(false);
+  useEffect(() => {
+    if (!mounted.current) {
+      mounted.current = true;
+    } else {
+      console.log("업데이트 될 때마다 실행");
+      fileupload();
+    }
+  }, [reqAudio]);
   
 
 
   return (
     <ReactMediaRecorder
       audio
+      onStop={onStop}
       render={({ status, startRecording, stopRecording, mediaBlobUrl }) => (
         <div id="container">
           <div className="container-inner">
@@ -76,18 +92,20 @@ export default function Modal({ closeModal }) {
             </div>
             <div className="buttons">
               <button
-                onClick={() => toggleRecording({ startRecording, stopRecording })}
+                onClick={() => {
+                  toggleRecording({ startRecording, stopRecording, mediaBlobUrl });
+                }}
                 type="button"
                 className={leftButtonClass}
               >
                 {leftButtonText}
               </button>
-              <button onClick={handleQuit} type="button" className="cancel">
+              <button onClick={endCall} type="button" className="cancel">
                 Quit
               </button>
             </div>
             <div>
-              <audio className="audiobox" src={mediaBlobUrl} controls></audio>
+              <audio className="audiobox" src={resp ? resAudio : ""} controls autoPlay></audio>
               <br />
             </div>
           </div>
