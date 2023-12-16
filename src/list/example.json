@@ -1,0 +1,56 @@
+[{
+  "id": 1,
+  "username": "준호새치",
+  "score": 50.5,
+  "dialogue": [{"speaker": "parent", "sentence": "안녕하세요 선생님.", "flag": 0}, {"speaker": "teacher", "sentence": "안녕하세요 학부모님. 무슨 일이신가요?", "flag": 0}, {"speaker": "parent", "sentence": "그건 좀 아니지 않나요?", "flag": 1}, {"speaker": "teacher", "sentence": "그런 것 같습니다 죄송합니다.", "flag": 0}, {"speaker": "parent", "sentence": "니가 뭘 알아 임마", "flag": 2}, {"speaker": "teacher", "sentence": "저는 아무것도 모르는 바보입니다.", "flag": 0}]
+},
+
+{
+  "id": 2,
+  "username": "앙민",
+  "score": 70.1,
+  "dialogue": [{"speaker": "parent", "sentence": "안녕하세요 선생님.", "flag": 0}, {"speaker": "teacher", "sentence": "안녕하세요 학부모님. 무슨 일이신가요?", "flag": 0}, {"speaker": "parent", "sentence": "그건 좀 아니지 않나요?", "flag": 1}, {"speaker": "teacher", "sentence": "그런 것 같습니다 죄송합니다.", "flag": 0}, {"speaker": "parent", "sentence": "니가 뭘 알아 임마", "flag": 2}, {"speaker": "teacher", "sentence": "저는 아무것도 모르는 바보입니다.", "flag": 0}]
+},
+
+
+{
+  "id": 3,
+  "username": "잘리미",
+  "score": 59.3,
+  "dialogue": [{"speaker": "parent", "sentence": "안녕하세요 선생님.", "flag": 0}, {"speaker": "teacher", "sentence": "안녕하세요 학부모님. 무슨 일이신가요?", "flag": 0}, {"speaker": "parent", "sentence": "그건 좀 아니지 않나요?", "flag": 1}, {"speaker": "teacher", "sentence": "그런 것 같습니다 죄송합니다.", "flag": 0}, {"speaker": "parent", "sentence": "니가 뭘 알아 임마", "flag": 2}, {"speaker": "teacher", "sentence": "저는 아무것도 모르는 바보입니다.", "flag": 0}]
+},
+
+{
+  "id": 4,
+  "username": "찬문철",
+  "score": 55.2,
+  "dialogue": [{"speaker": "parent", "sentence": "안녕하세요 선생님.", "flag": 0}, {"speaker": "teacher", "sentence": "안녕하세요 학부모님. 무슨 일이신가요?", "flag": 0}, {"speaker": "parent", "sentence": "그건 좀 아니지 않나요?", "flag": 1}, {"speaker": "teacher", "sentence": "그런 것 같습니다 죄송합니다.", "flag": 0}, {"speaker": "parent", "sentence": "니가 뭘 알아 임마", "flag": 2}, {"speaker": "teacher", "sentence": "저는 아무것도 모르는 바보입니다.", "flag": 0}]
+},
+{
+  "id": 5,
+  "username": "준호새치2",
+  "score": 50.5,
+  "dialogue": [{"speaker": "parent", "sentence": "안녕하세요 선생님.", "flag": 0}, {"speaker": "teacher", "sentence": "안녕하세요 학부모님. 무슨 일이신가요?", "flag": 0}, {"speaker": "parent", "sentence": "그건 좀 아니지 않나요?", "flag": 1}, {"speaker": "teacher", "sentence": "그런 것 같습니다 죄송합니다.", "flag": 0}, {"speaker": "parent", "sentence": "니가 뭘 알아 임마", "flag": 2}, {"speaker": "teacher", "sentence": "저는 아무것도 모르는 바보입니다.", "flag": 0}]
+},
+
+{
+  "id": 6,
+  "username": "앙민2",
+  "score": 30.1,
+  "dialogue": [{"speaker": "parent", "sentence": "안녕하세요 선생님.", "flag": 0}, {"speaker": "teacher", "sentence": "안녕하세요 학부모님. 무슨 일이신가요?", "flag": 0}, {"speaker": "parent", "sentence": "그건 좀 아니지 않나요?", "flag": 1}, {"speaker": "teacher", "sentence": "그런 것 같습니다 죄송합니다.", "flag": 0}, {"speaker": "parent", "sentence": "니가 뭘 알아 임마", "flag": 2}, {"speaker": "teacher", "sentence": "저는 아무것도 모르는 바보입니다.", "flag": 0}]
+},
+
+
+{
+  "id": 7,
+  "username": "잘리미2",
+  "score": 20.1,
+  "dialogue": [{"speaker": "parent", "sentence": "안녕하세요 선생님.", "flag": 0}, {"speaker": "teacher", "sentence": "안녕하세요 학부모님. 무슨 일이신가요?", "flag": 0}, {"speaker": "parent", "sentence": "그건 좀 아니지 않나요?", "flag": 1}, {"speaker": "teacher", "sentence": "그런 것 같습니다 죄송합니다.", "flag": 0}, {"speaker": "parent", "sentence": "니가 뭘 알아 임마", "flag": 2}, {"speaker": "teacher", "sentence": "저는 아무것도 모르는 바보입니다.", "flag": 0}]
+},
+
+{
+  "id": 8,
+  "username": "찬문철2",
+  "score": 15.2,
+  "dialogue": [{"speaker": "parent", "sentence": "안녕하세요 선생님.", "flag": 0}, {"speaker": "teacher", "sentence": "안녕하세요 학부모님. 무슨 일이신가요?", "flag": 0}, {"speaker": "parent", "sentence": "그건 좀 아니지 않나요?", "flag": 1}, {"speaker": "teacher", "sentence": "그런 것 같습니다 죄송합니다.", "flag": 0}, {"speaker": "parent", "sentence": "니가 뭘 알아 임마", "flag": 2}, {"speaker": "teacher", "sentence": "저는 아무것도 모르는 바보입니다.", "flag": 0}]
+}]  

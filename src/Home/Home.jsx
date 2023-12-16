@@ -42,7 +42,8 @@ export default function Home() {
             <div>
               <h5 className="ment">
                 안녕하세요, 민원 시뮬레이터 MOSI입니다.</h5>
-              <h6 className="ment2">닉네임을 입력 후, 직접 민원 필터링 서비스를 체험하세요!</h6>
+                <h6 className="ment2">무심코 내뱉은 말들이 누군가에게는 악성민원이 될 수 있습니다. </h6>
+              <h6 className="ment2">지금 당신의 민원 상태를 진단해보세요.</h6>
               
             </div>
             <div>

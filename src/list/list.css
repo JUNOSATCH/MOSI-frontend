@@ -21,15 +21,18 @@
 .listdiv{
     margin: 0 auto;
     text-align: center;
-    width: 70vw;
+    
     display: flex;
     flex-direction: column;
     margin-top: 5vh;
 }
 .listboxdiv{
+  width: 70vw;
+  margin-left: 15vw;
     display: flex;
     flex-direction: row;
-}
+    flex-wrap: wrap; /* 이 부분이 중요해! */
+  }
 .listtitle{
     font-size: 30px;
     font-family: 'TTWanjudaedunsancheB';
@@ -43,7 +46,7 @@
   display: flex;
   flex-direction: column;
   width: 20vw;
-  height: 50vh;
+  height: 60vh;
   overflow: hidden;
   border-radius: .5em;
   text-decoration: none;
@@ -80,12 +83,15 @@
 
 .data-card p {
   opacity: 0;
+  font-size: 15px;
   color: #FFFFFF;
   font-weight: 600;
   line-height: 1.8;
   margin: 0 0 1.25em;
   transform: translateY(-1em);
   transition: opacity .45s ease, transform .5s ease;
+  text-align: left; /* 텍스트를 왼쪽 정렬로 변경 */
+
 }
 
 .data-card .link-text {

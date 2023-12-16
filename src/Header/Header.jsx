@@ -14,7 +14,7 @@ export default function Header() {
                 <a href="/">Home</a>
                 <a href="/list">Record</a>
                 <a href="/rank">Rank</a>
-                <a href="#">Partners</a>
+                <a href="/profile">Partners</a>
             </nav>
            
         </div>

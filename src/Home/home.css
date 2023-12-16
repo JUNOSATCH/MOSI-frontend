@@ -32,7 +32,7 @@
 }
 .ment2{
     font-size: 20px;
-    margin-top: -3vh;
+    margin-top: -5vh;
     font-family: 'HakgyoansimWoojuR';
 }
 .homeimgdiv{
@@ -44,14 +44,14 @@
 }
 
 .startbtn {
-    background-color: rgb(0, 0, 0,0.38);
+    background-color: rgb(0, 0, 0,0.7);
     border-radius: 30px;
     font-size: 24px;
     padding: 5px;
     width: 20vw;
     height: 5vh;
     color: white;
-    border: 3px solid rgb(77, 77, 77);
+    border: 3px solid rgb(33, 32, 32);
     margin-top: 1vh;
     margin-left: 2vw;
 }
