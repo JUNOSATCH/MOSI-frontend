@@ -2,10 +2,14 @@ import React, { useState } from "react";
 import axios from "axios";
 import { ReactMediaRecorder } from "react-media-recorder";
 import styles from "./modal.css";
+<<<<<<< HEAD
 import { useEffect, useRef } from "react";
 
 const url = 'http://localhost:8080/api';
 
+=======
+import { useEffect } from "react";
+>>>>>>> 569a52fab94e26ce3641f9eefdbba4e3f19543db
 
 export default function Modal({ closeModal }) {
   

@@ -3,11 +3,26 @@ import styles from "./rank.css";
 import Header from "../Header/Header";
 import Rankbox from "./Rankbox";
 import { useNavigate } from "react-router-dom";
+import data from "../list/example.json";
 export default function Rank() {
     const navigate = useNavigate();
     const gomore = (name) => {
-        navigate("/record", { state: {name}});
+        navigate('/record2', {
+            state: {
+              name: data.name,
+              score: data.score,
+              id: data.id,
+              sentence : data.dialogue
+            }
+          });
     }
+    const sortedData = data.sort((a, b) => b.score - a.score);
+
+  // 점수를 기준으로 정렬된 데이터에 순위(rank)를 부여
+  const rankedData = sortedData.map((item, index) => ({
+    ...item,
+    rank: index + 1,
+  }));
     return(
         <div>
             <Header/>
@@ -22,28 +37,18 @@ export default function Rank() {
                     <div class="table-headertxt col col-4">대화 기록</div>
                 </li>
                 <hr className="hr"></hr>
-                <li class="table-row-first">
-                    <div class="col col-1" data-label="Job Id">1 🥇</div>
-                    <div class="col col-2" data-label="Customer Name">넹면</div>
-                    <div class="col col-3" data-label="Amount">30</div>
-                    <div class="more col col-4" data-label="Payment Status"><a onClick={() => gomore("넹면")}>더보기 {`>`}</a></div>
-                </li>
-                <li class="table-row">
-                    <div class="col col-1" data-label="Job Id">2 🥈</div>
-                    <div class="col col-2" data-label="Customer Name">융</div>
-                    <div class="col col-3" data-label="Amount">20</div>
-                    <div class="more col col-4" data-label="Payment Status"><a onClick={() => gomore("융")}>더보기 {`>`}</a></div>
-                </li>
-                <li class="table-row">
-                    <div class="col col-1" data-label="Job Id">3 🥉</div>
-                    <div class="col col-2" data-label="Customer Name">캬캬</div>
-                    <div class="col col-3" data-label="Amount">19</div>
-                    <div class="more col col-4" data-label="Payment Status"><a onClick={() => gomore("캬캬")}>더보기 {`>`}</a></div>
-                </li>
-               <Rankbox rank="4" name="ee" score="15"/>
-               <Rankbox rank="5" name="kk" score="15"/>
-               <Rankbox rank="6" name="ee" score="15"/>
-               <Rankbox rank="7" name="ee" score="15"/>
+            
+                {rankedData.map((data, index) => (
+                    <Rankbox
+                        key={index}
+                        rank={data.rank}
+                        name={data.username}
+                        score={data.score}
+                        id={data.id}
+                        dialogue={data.dialogue}
+                        gomore={gomore}
+                    />
+            ))}
             </ul>
             </div>
         </div>

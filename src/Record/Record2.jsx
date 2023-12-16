@@ -3,8 +3,8 @@ import styles from "./record.css";
 import Header from "../Header/Header";
 import { useLocation } from "react-router-dom";
 import data from './../list/example.json';
-export default function Record (props) {
-    const { state } = useLocation();
+export default function Record2 (props) {
+const { state } = useLocation();
   const id = state ? state.id : null;
   
   // 해당 ID에 맞는 데이터 찾기

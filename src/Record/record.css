@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'HakgyoansimWoojuR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimWoojuR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'TTWanjudaedunsancheB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/TTWanjudaedunsancheB.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+  }
 .recorddiv{
     margin: 0 auto;
     text-align: center;
@@ -10,13 +22,28 @@
     margin-top: 5vh;
     height: 57vh;
     border-radius: 20px;
-    padding: 10px;
+    padding: 15px;
+    font-family: 'HakgyoansimWoojuR';
+    font-size: 18px;
+    font-weight: 900;
+    color: rgb(0,0,0,0.5);
 }
 
 .recordname{
+    font-family: 'HakgyoansimWoojuR';
     margin-top: 20vh;
-    font-size: 24px;
+    font-size: 30px;
 }
 .recordtxt{
     font-size: 20px;
 }
+.recordscore{
+    font-family: 'HakgyoansimWoojuR';
+    font-size: 24px;
+    color: rgb(153, 12, 12);
+    font-weight: 900;
+}
+/*{ dialogue의 sentence들을 map을 통해 출력 }*/
+/*{data.dialogue.map((dialog, index) => (
+    <li key={index}>{dialog.sentence}</li>
+  ))}*/
