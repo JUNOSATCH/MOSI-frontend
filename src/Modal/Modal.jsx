@@ -1,18 +1,17 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { ReactMediaRecorder } from "react-media-recorder";
 import styles from "./modal.css";
-<<<<<<< HEAD
 import { useEffect, useRef } from "react";
 
 const url = 'http://localhost:8080/api';
 
-=======
-import { useEffect } from "react";
->>>>>>> 569a52fab94e26ce3641f9eefdbba4e3f19543db
 
-export default function Modal({ closeModal }) {
+export default function Modal({ closeModal, userId, userName }) {
   
+  const navigate = useNavigate();
+
   const fileupload = async () => {
     const formData = new FormData();
     formData.append("file", reqAudio); // Replace 'audioBlob' with your captured audio blob
@@ -31,11 +30,25 @@ export default function Modal({ closeModal }) {
     }
   };
 
+  // const gorecord = () => {
+  //   navigate('/record', {
+  //     state: {
+  //       name: userName,
+  //       score: score,
+  //       id: userId,
+  //       dialogue : dialogue,
+  //     }
+  //   });
+  // };
+
   const endCall = async () => {
     try {
-      const response = await axios.post(`${url}/analysis`, {});
+      const response = await axios.post(`${url}/analysis`, { id: userId, name: userName });
       console.log(response.data);
+      // setDialogue(response.data.dialogue);
+      // setScore(response.data.score);
       closeModal();
+      // gorecord();
     } catch (err) { console.error(err); }
   }
 
@@ -47,6 +60,9 @@ export default function Modal({ closeModal }) {
 
   const [leftButtonText, setLeftButtonText] = useState("Speak"); // Initial left button text
   const [leftButtonClass, setLeftButtonClass] = useState("confirm"); // Initial left button class
+
+  const [score, setScore] = useState("");
+  const [dialogue, setDialogue] = useState("");
 
   const toggleRecording = ({ startRecording, stopRecording, mediaBlobUrl }) => {
     if (isRecording) {
@@ -76,6 +92,14 @@ export default function Modal({ closeModal }) {
       fileupload();
     }
   }, [reqAudio]);
+
+  // useEffect(() => {
+  //   if (!mounted.current) {
+  //     mounted.current = true;
+  //   } else {
+  //     gorecord();
+  //   }
+  // }, [score]);
   
 
 

@@ -5,17 +5,21 @@ import Header from "../Header/Header";
 import styles from "./home.css";
 import Modal from "../Modal/Modal";
 import Swal from "sweetalert2";
+import axios from "axios";
+
+const url = "http://localhost:8080";
 
 export default function Home() {
   const navigate = useNavigate();
   const [nickname, setNickname] = useState("");
+  const [id, setId] = useState("");
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const handleNicknameChange = (e) => {
     setNickname(e.target.value);
   };
 
-  const handleStartSimulation = () => {
+  const handleStartSimulation = async () => {
     if (!nickname.trim()) {
       Swal.fire({
         icon: "warning",
@@ -24,6 +28,9 @@ export default function Home() {
       });
     } else {
       console.log("닉네임:", nickname);
+      const response = await axios.post(`${url}/dialogue/enter`, { name: nickname });
+      console.log(response.data.id);
+      setId(response.data.id);
       setModalIsOpen(true);
     }
   };
@@ -68,7 +75,7 @@ export default function Home() {
         </div>
       </div>
       {/* 모달 컴포넌트 렌더링 */}
-      {modalIsOpen && <Modal closeModal={closeModal} />}
+      {modalIsOpen && <Modal closeModal={closeModal} userId={id} userName={nickname} />}
     </div>
   );
 }
